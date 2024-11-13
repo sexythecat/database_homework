@@ -6,7 +6,7 @@ from 学科_DAO_Impl import 学科_DAO_Impl
 # 判断角色的ID号,寻找角色
 class DisciplineLeader:
 
-
+    # 学科负责人确定学科方向
     def  researchFocusDefiner(selef,角色ID,学科研究方向,描述):
         # 按照要求存储过程逻辑写好了
         user=UserRegister.Service_User_Register.findUser(角色ID)

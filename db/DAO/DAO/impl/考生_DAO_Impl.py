@@ -1,5 +1,7 @@
 from DAO.DAO import Base_DAO
 from DAO.考生_DAO import 考生_DAO
+from sql import 考生
+
 
 class 考生_DAO_Impl(Base_DAO, 考生_DAO):
     def __init__(self):
@@ -36,7 +38,7 @@ class 考生_DAO_Impl(Base_DAO, 考生_DAO):
         self.connection.commit()
         cursor.close()
 
-    def select_考生_by_id(self, 考生ID):
+    def select_考生_by_id(self, 考生ID)->考生:
         cursor = self.connection.cursor()
         query = "SELECT * FROM 考生 WHERE 考生ID = %s"
         cursor.execute(query, (考生ID,))

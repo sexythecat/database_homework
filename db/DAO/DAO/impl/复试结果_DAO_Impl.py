@@ -1,5 +1,7 @@
 from DAO.DAO import Base_DAO
 from DAO.复试结果_DAO import 复试结果_DAO
+from sql import 复试结果
+
 
 class 复试结果_DAO_Impl(Base_DAO, 复试结果_DAO):
     def __init__(self):
