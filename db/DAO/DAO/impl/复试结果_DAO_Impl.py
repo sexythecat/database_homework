@@ -55,3 +55,19 @@ class 复试结果_DAO_Impl(Base_DAO, 复试结果_DAO):
         results = cursor.fetchall()
         cursor.close()
         return results
+
+    def select_all_ByTutorID(self,TutorID):
+        cursor = self.get_cursor()
+        query = "SELECT * FROM 复试结果 WHERE 最终导师ID = %s"
+        cursor.execute(query, (TutorID,))
+        result = cursor.fetchone()
+        cursor.close()
+        return result
+
+    def select_复试结果_by_考生ID(self,考生ID):
+        cursor = self.get_cursor()
+        query = "SELECT * FROM 复试结果 WHERE 考生ID = %s"
+        cursor.execute(query, (考生ID))
+        result = cursor.fetchone()
+        cursor.close()
+        return result

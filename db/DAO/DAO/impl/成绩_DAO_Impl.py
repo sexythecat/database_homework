@@ -8,7 +8,7 @@ class 成绩_DAO_Impl(Base_DAO, 成绩_DAO):
     def get_cursor(self):
         return self.connection.cursor()
 
-    def insert_成绩(self, 数值, 考生ID, 考试科目ID):
+    def insert_初试成绩(self, 数值, 考生ID, 考试科目ID,):
         cursor = self.get_cursor()
         query = "INSERT INTO 成绩 (数值, 考生ID, 考试科目ID) VALUES (%s, %s, %s)"
         cursor.execute(query, (数值, 考生ID, 考试科目ID))

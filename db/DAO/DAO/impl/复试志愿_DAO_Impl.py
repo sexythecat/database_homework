@@ -38,10 +38,10 @@ class 复试志愿_DAO_Impl(Base_DAO, 复试志愿_DAO):
         self.connection.commit()
         cursor.close()
 
-    def select_复试志愿_by_id(self, 志愿ID):
+    def select_复试志愿_by_id(self, 考生ID):
         cursor = self.get_cursor()
-        query = "SELECT * FROM 复试志愿 WHERE 志愿ID = %s"
-        cursor.execute(query, (志愿ID,))
+        query = "SELECT * FROM 复试志愿 WHERE 考生ID = %s"
+        cursor.execute(query, (考生ID,))
         result = cursor.fetchone()
         cursor.close()
         return result

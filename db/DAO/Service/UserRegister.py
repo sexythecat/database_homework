@@ -6,7 +6,7 @@ from User_DAO_Impl import User_DAO_Impl
 # 全体用户的注册方式
 class Service_User_Register():
 
-    def userRegister(用户ID, 用户名, 更新时间, 角色ID, 邮箱, 手机号, 姓名, 密码):
+    def userRegister(self,用户ID, 用户名, 更新时间, 角色ID, 邮箱, 手机号, 姓名, 密码):
         # 创建 User_DAO_Impl 实例
         user_dao = User_DAO_Impl()
 
